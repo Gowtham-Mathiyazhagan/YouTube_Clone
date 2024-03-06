@@ -7,9 +7,22 @@ body {
   box-sizing: border-box;
 }
 /* Grid layout */
-
+.main-container{
+  /* height: 100vh;
+  width: 100vw; */
+  display: grid;
+  grid-template-areas: 
+  'header header header'
+  'sidebar topheadline topheadline'
+  'sidebar playlist palylist'
+  ;
+  grid-template-columns:110px 1fr 1fr;
+  grid-template-rows: 60px 80px 1fr;
+  margin: 0 20px 0 20px;
+}
 /* Css for Header */
 .header-container{
+  grid-area: header;
   height: 60px;
   width: 100%;
   display: flex;
@@ -37,7 +50,7 @@ img{
 }
 .logo-design{
   display: flex;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 .name{
 margin-top:.1em;
@@ -64,6 +77,7 @@ display: flex;
   border: 1px solid black;
   border-right: none;
 }
+
 .input-section > button{
   height: 2.8em;
   width: 50px;
@@ -96,7 +110,7 @@ font-size: 16px;
 }
 .group-left-icons{
   display: flex;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
  :is(.bi-camera-reels,.bi-bell){
@@ -124,16 +138,16 @@ font-size: 16px;
 
 /* Css for TopHeadLines */
 .TopHeadLines-container{
+  grid-area: topheadline;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 60px;
   width: 100%;
-  /* background-color: aqua; */
 }
 .white-shadow{
   height: 70%;
-  width:91%;
+  width:93%;
 position: relative;
 }
 .white-shadow::before{
@@ -192,4 +206,55 @@ position: relative;
 }
 .TopHeadLines-container button:hover{
   background-color: #e1e0e0;
+}
+/* end of TopHeadLines */
+
+/* Start leftSideBar */
+.leftSideBar-container{
+  grid-area: sidebar;
+  height: 100%;
+  width: 50px;
+  overflow: hidden;
+margin-right: 5px;
+}
+.sidebar-icons{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sidebar-icons > div{
+height: 50px;
+width: 50px;
+border-radius: 10px;
+}
+.sidebar-icons > div:hover{
+  background-color:#e1e0e0; 
+}
+:is(.home,.sorts,.subscription,.you) {
+  padding-top: 10px;
+  text-align: center;
+}
+:is(.home,.sorts,.subscription,.you) :nth-child(2){
+  font-size: 8px;
+  /* text-align: center; */
+}
+/* end of leftSideBar */
+
+/* Start playlist */
+.playlist-container{
+  grid-area: playlist;
+  height: 80vh;
+  width: 80vw;
+  overflow-x: auto;
+  margin-bottom: 50px;
+}
+.content-cards{
+  height: 80vh;
+  width: 80vw;
+}
+.card{
+  height: 14em;
+  width: 24em;
+background-color: #d13e3e;
+
 }

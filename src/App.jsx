@@ -4,14 +4,18 @@ import './App.css'
 import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import TopHeadLine from './Components/TopHeadLine';
 import LeftSideBar from './Components/LeftSideBar';
+import PlayList from './Components/PlayList';
 
 
 function App() {
   return (
 <>
+<div className="main-container">
 <Header/>
 <TopHeadLine/>
 <LeftSideBar/>
+<PlayList/>
+</div>
 </>  )
 }
 
