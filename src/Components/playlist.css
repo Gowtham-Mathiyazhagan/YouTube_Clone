@@ -1,0 +1,20 @@
+/* Start playlist */
+.playlist-container {
+	background-color: antiquewhite;
+	grid-area: playlist;
+	height: 400vh;
+	width: 92vw;
+	overflow-x: auto;
+	margin-bottom: 3.1rem;
+	/* overflow-y: hidden; */
+  }
+  .content-cards {
+	height: 100%;
+	width: 100%;
+  }
+  .card {
+	height: 14em;
+	width: 24em;
+	background-color: #d13e3e;
+  }
+  

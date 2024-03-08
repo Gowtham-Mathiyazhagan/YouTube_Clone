@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRef } from 'react'
 import { scroller } from 'react-scroll'
+import './leftsidebar.css'
 const TopHeadLine = () => {
    const containerRef = useRef(null)
    const handleMove = (direction)=>{

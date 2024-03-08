@@ -1,0 +1,36 @@
+/* Start leftSideBar */
+.leftSideBar-container {
+	grid-area: sidebar;
+	height: 100%;
+	width: 3.1rem;
+	overflow: hidden;
+	margin-right: 5px;
+	background-color: aqua;
+	/* position: fixed;
+	top: 0;
+	left: 0; */
+  }
+  .sidebar-icons {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	align-items: center;
+  }
+  .sidebar-icons > div {
+	height: 3.1rem;
+	width: 3.1rem;
+	border-radius: 10px;
+  }
+  .sidebar-icons > div:hover {
+	background-color: #e1e0e0;
+  }
+  :is(.home, .sorts, .subscription, .you) {
+	padding-top: 10px;
+	text-align: center;
+  }
+  :is(.home, .sorts, .subscription, .you) :nth-child(2) {
+	font-size: 8px;
+	/* text-align: center; */
+  }
+  /* end of leftSideBar */
+  

@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap");
+
+html {
+  font-size: 16px;
+}
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -7,254 +11,113 @@ body {
   box-sizing: border-box;
 }
 /* Grid layout */
-.main-container{
-  /* height: 100vh;
-  width: 100vw; */
+.main-container {
+  height: 100vh;
+  /* width: 100vw; */
   display: grid;
-  grid-template-areas: 
-  'header header header'
-  'sidebar topheadline topheadline'
-  'sidebar playlist palylist'
-  ;
-  grid-template-columns:110px 1fr 1fr;
-  grid-template-rows: 60px 80px 1fr;
-  margin: 0 20px 0 20px;
+  grid-template-areas:
+    "header header header"
+    "sidebar topheadline topheadline"
+    "sidebar playlist palylist";
+  grid-template-columns: 4rem 1fr 1fr;
+  grid-template-rows: 4rem 5rem 1fr;
+ 
+  margin: 0 20px 0 0px;
 }
-/* Css for Header */
-.header-container{
-  grid-area: header;
-  height: 60px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bi-list{
-	opacity: .7;
-  font-size: 22px;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  line-height: 38px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.bi-list:hover{
-  opacity: 1;
-  background-color: #e1e0e0;
-}
-img{
-  height: 2em;
-  margin-top: .1em;
-}
-.logo-design{
-  display: flex;
-  /* margin-left: 20px; */
-}
-.name{
-margin-top:.1em;
-font-family: 'Roboto Condensed', sans-serif;
-}
-.name1,.name2{
-  font-size: 1em;
-  font-weight: 800;
-margin-left:-.4em ;
-}
-.name2{
-  margin-top: -6px;
-}
-.input-section{
-display: flex;
-}
-.input-section > input{
-  outline: none;
-  height: 2.6em;
-  width: 30em;
-  padding-left: 15px;
-  border-top-left-radius: 20px ;
-  border-bottom-left-radius: 20px;
-  border: 1px solid black;
-  border-right: none;
-}
-
-.input-section > button{
-  height: 2.8em;
-  width: 50px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  border: 1px solid black;
-background-color: white;
-cursor: pointer;
-}
-.input-section > button:hover{
-  background-color: #e1e0e0;
-}
-button > i{
-font-size: 16px;
-}
-.bi-mic-fill{
-  font-size: 20px;
-  height: 40px;
-  width: 40px;
-  background-color: #eeecec;
-  text-align: center;
-  line-height: 38px;
-  border-radius: 50%;
-  display: block;
-  margin-left: 2em;
-  cursor: pointer;
-}
-.bi-mic-fill:hover{
-  background-color: #e1e0e0;
-}
-.group-left-icons{
-  display: flex;
-  /* margin-right: 20px; */
-}
-
- :is(.bi-camera-reels,.bi-bell){
-  display:block;
-  font-size: 20px;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  line-height: 38px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-:is(.bi-camera-reels,.bi-bell):hover{
-  background-color: #e1e0e0;
-}
-.bi-person-circle{
-  font-size: 20px;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  line-height: 38px;
-  border-radius: 50%;
-}
-/* End of the Header Section */
 
 /* Css for TopHeadLines */
-.TopHeadLines-container{
+.TopHeadLines-container {
   grid-area: topheadline;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  height: 3.7rem;
   width: 100%;
+  /* position: fixed;
+  top: 0;
+  left: 0; */
 }
-.white-shadow{
+.TopHeadLines-container .white-shadow {
   height: 70%;
-  width:93%;
-position: relative;
+  width: 93%;
+  position: relative;
 }
-.white-shadow::before{
+.TopHeadLines-container .white-shadow::before {
   content: "";
   position: absolute;
   top: -20%;
   left: 0;
   height: 100%;
-  width: 30px;
-  background:linear-gradient(90deg,rgb(255, 255, 255),transparent);
+  width: 1.8rem;
+  background: linear-gradient(90deg, rgb(255, 255, 255), transparent);
   z-index: 2;
 }
-.white-shadow::after{
+.TopHeadLines-container .white-shadow::after {
   content: "";
   position: absolute;
   top: -20%;
   right: 0;
   height: 100%;
-  width: 30px;
-  background:linear-gradient(-90deg,rgb(255, 255, 255),transparent);
+  width: 1.8rem;
+  background: linear-gradient(-90deg, rgb(255, 255, 255), transparent);
   z-index: 2;
 }
-.top-child{
+.TopHeadLines-container .top-child {
   height: 100%;
-  width:100%;
+  width: 100%;
   /* display: flex;
   justify-content: space-between; */
-  overflow:auto;
+  overflow: auto;
   white-space: nowrap;
 }
-.top-child::-webkit-scrollbar{
- -webkit-appearance:none;
+.TopHeadLines-container .top-child::-webkit-scrollbar {
+  -webkit-appearance: none;
 }
-.top-child div{
+.TopHeadLines-container .top-child div {
   display: inline-block;
   margin-left: 10px;
   background-color: #eeecec;
   padding: 2px 7px 2px 7px;
   border-radius: 8px;
   text-transform: capitalize;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 500;
   cursor: pointer;
 }
-.top-child div:hover{
+.TopHeadLines-container .top-child div:hover {
   background-color: #e1e0e0;
 }
-.TopHeadLines-container button{
+.TopHeadLines-container button {
   border: none;
   background-color: white;
   margin-bottom: 15px;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 50%;
 }
-.TopHeadLines-container button:hover{
+.TopHeadLines-container button:hover {
   background-color: #e1e0e0;
 }
 /* end of TopHeadLines */
 
-/* Start leftSideBar */
-.leftSideBar-container{
-  grid-area: sidebar;
-  height: 100%;
-  width: 50px;
-  overflow: hidden;
-margin-right: 5px;
-}
-.sidebar-icons{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.sidebar-icons > div{
-height: 50px;
-width: 50px;
-border-radius: 10px;
-}
-.sidebar-icons > div:hover{
-  background-color:#e1e0e0; 
-}
-:is(.home,.sorts,.subscription,.you) {
-  padding-top: 10px;
-  text-align: center;
-}
-:is(.home,.sorts,.subscription,.you) :nth-child(2){
-  font-size: 8px;
-  /* text-align: center; */
-}
-/* end of leftSideBar */
 
 /* Start playlist */
-.playlist-container{
+.playlist-container {
+  background-color: antiquewhite;
   grid-area: playlist;
-  height: 80vh;
-  width: 80vw;
+  height: 400vh;
+  width: 92vw;
   overflow-x: auto;
-  margin-bottom: 50px;
+  margin-bottom: 3.1rem;
+  /* overflow-y: hidden; */
 }
-.content-cards{
-  height: 80vh;
-  width: 80vw;
+.content-cards {
+  height: 100%;
+  width: 100%;
 }
-.card{
+.card {
   height: 14em;
   width: 24em;
-background-color: #d13e3e;
-
+  background-color: #d13e3e;
 }
