@@ -1,5 +1,6 @@
 import React from 'react'
 import img from '../assets/gowtham.jpg'
+import { Link } from 'react-router-dom'
 import './playlist.css'
 const PlayList = () => {
   return (
