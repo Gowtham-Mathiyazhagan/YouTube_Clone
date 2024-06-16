@@ -9,11 +9,3 @@ export async function callBack(options) {
     console.error(error);
   }
 }
-
-const obj = {
-  name: 'Dave',
-  showThis: function() {
-      console.log(name);
-  }
-};
-obj.showThis(); // { name: 'Dave', showThis: [Function: showThis] }
