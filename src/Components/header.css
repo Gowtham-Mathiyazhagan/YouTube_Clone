@@ -7,10 +7,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: fixed;
-	top: 0;
-	left: 0; */
   padding-left:10px ;
+  
+  background: #ffffff;
 }
 
 .header-container .bi-list {
@@ -44,6 +43,7 @@
   font-size: 1em;
   font-weight: 800;
   margin-left: -0.4em;
+  color: #000000;
 }
 .header-container .name2 {
   margin-top: -6px;
@@ -53,23 +53,22 @@
 }
 .header-container .input-section > input {
   outline: none;
-  height: 2.6em;
-  width: 30em;
+ /* height: 2.6em; */
+   width: 30em; 
   padding-left: 15px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  border: 1px solid black;
+  border: 1px solid #b2b2b2;
   border-right: none;
 }
 
 .header-container .input-section > button {
-  height: 2.8em;
-  width: 50px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  border: 1px solid black;
+  border: 1px solid #b2b2b2;
   background-color: white;
   cursor: pointer;
+  padding: 0 20px;
 }
 .header-container .input-section > button:hover {
   background-color: #e1e0e0;
